@@ -1,0 +1,18 @@
+= HARPI
+
+image::harpy.png[Harpy,200,200,float="right"]
+
+The goal is having https://www.home-assistant.io/[Home Assistant] deployed on a https://www.raspberrypi.com/[RaspberryPI].
+
+The SD card image build process needs to be repeatable, hence the use of a https://nixos.wiki/wiki/flakes[Nix flake] to provide a https://docs.yoctoproject.org/[Yocto development environment] in charge of producing the said image.
+Currently, the idea is to rely on:
+
+* The https://github.com/nix-community/nix-environments/tree/master/envs/yocto[Yocto environment] provided by the https://github.com/nix-community/nix-environments[community Nix environments].
+* This https://github.com/meta-homeassistant/meta-homeassistant[meta-homeassistant] Yocto layer maintained on Github.
+
+Additional documentation:
+
+* https://kickstartembedded.com/2021/12/19/yocto-part-1-a-definitive-introduction/[Yocto introduction]
+* https://nixos-and-flakes.thiscute.world/development/intro[Development Environments on NixOS]
+* https://kas.readthedocs.io/en/latest/index.html[kas documentation]
+
